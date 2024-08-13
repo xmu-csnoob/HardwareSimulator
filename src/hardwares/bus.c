@@ -20,7 +20,7 @@ void bus_read(BUS *bus, int address, BYTE *buffer, int size) {
             return;
         }
     }
-    printf("No device found at address %x\n", address);
+    _WARN("No device found at address %x", address);
 }
 
 void bus_write(BUS *bus, int address, const BYTE *buffer, int size) {
@@ -32,5 +32,5 @@ void bus_write(BUS *bus, int address, const BYTE *buffer, int size) {
             return;
         }
     }
-    printf("No device found at address %x\n", address);
+    _WARN("No device found at address %x", address);
 }
